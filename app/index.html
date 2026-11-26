@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NusaStat — Statistik Indonesia</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="#/"><span class="mark">N</span> NusaStat</a>
+    <nav class="nav" id="nav">
+      <a href="#/" data-route="">Ringkasan</a>
+      <a href="#/ekonomi" data-route="ekonomi">Ekonomi</a>
+      <a href="#/penduduk" data-route="penduduk">Penduduk</a>
+      <a href="#/daerah" data-route="daerah">Daerah</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap" id="view"></main>
+<footer class="foot">
+  <div class="wrap">
+    <p><strong>NusaStat</strong> — portal statistik Indonesia dari angka resmi. Data per 26 November 2026.</p>
+    <p>Sumber: Badan Pusat Statistik (BPS), Bank Dunia (World Development Indicators), Ditjen Dukcapil Kemendagri. Angka dibulatkan dari publikasi resmi; tiap bagian mencantumkan tahun rujukan masing-masing angka.</p>
+  </div>
+</footer>
+<script src="data.js"></script>
+<script src="views.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+/* NusaStat — gaya asli: kertas hangat, tinta laut dalam, aksen kunyit dan teal. */
+:root {
+  --paper: #f6f1e7;
+  --card: #fffdf7;
+  --ink: #14273c;
+  --muted: #5b6b7a;
+  --line: #ddd3bd;
+  --amber: #c07f10;
+  --amber-soft: #f3e3bd;
+  --teal: #14685c;
+  --teal-soft: #dcebe7;
+  --navy: #10233a;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+}
+.wrap { max-width: 1020px; margin: 0 auto; padding: 0 20px; }
+
+/* Kepala */
+.top { background: var(--navy); color: #f6f1e7; border-bottom: 4px solid var(--amber); }
+.top-in { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-top: 14px; padding-bottom: 14px; }
+.brand { color: #f6f1e7; text-decoration: none; font-family: Georgia, "Times New Roman", serif; font-size: 26px; font-weight: 700; letter-spacing: .5px; }
+.mark { display: inline-block; width: 34px; height: 34px; line-height: 34px; text-align: center; background: var(--amber); color: var(--navy); border-radius: 6px; margin-right: 8px; font-size: 22px; }
+.nav { display: flex; gap: 4px; flex-wrap: wrap; }
+.nav a { color: #cfd8e2; text-decoration: none; padding: 8px 12px; border-radius: 6px; font-size: 15px; }
+.nav a:hover { color: #fff; background: rgba(255, 255, 255, .08); }
+.nav a.active { color: #fff; background: var(--teal); }
+
+/* Isi */
+main { padding: 28px 20px 40px; }
+.hero { padding: 8px 0 4px; }
+.hero h1 { font-family: Georgia, "Times New Roman", serif; font-size: 40px; line-height: 1.12; margin: 0 0 10px; }
+.hero p.lede { font-size: 18px; color: var(--muted); max-width: 640px; margin: 0 0 6px; }
+.stamp { font-size: 13px; color: var(--muted); }
+.stamp b { color: var(--ink); }
+h2 { font-family: Georgia, "Times New Roman", serif; font-size: 24px; margin: 30px 0 4px; }
+h3 { font-size: 17px; margin: 0 0 6px; }
+.section-note { color: var(--muted); margin: 0 0 14px; max-width: 680px; }
+.rule { border: 0; border-top: 1px solid var(--line); margin: 28px 0 0; }
+
+/* Kartu indikator */
+.cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 18px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 16px; }
+.card .lab { font-size: 13px; color: var(--muted); text-transform: uppercase; letter-spacing: .4px; }
+.card .val { font-family: Georgia, "Times New Roman", serif; font-size: 30px; line-height: 1.15; margin: 6px 0 2px; }
+.card .val small { font-size: 16px; font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--muted); }
+.card .note { font-size: 13.5px; color: var(--muted); margin: 0; }
+.card .src { font-size: 12px; color: var(--amber); margin: 8px 0 0; }
+
+/* Sorotan */
+.highlights { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+.hi { border-radius: 10px; padding: 16px; }
+.hi.amber { background: var(--amber-soft); border: 1px solid #e3c98a; }
+.hi.teal { background: var(--teal-soft); border: 1px solid #a9cec6; }
+.hi.plain { background: var(--card); border: 1px solid var(--line); }
+.hi p { margin: 0; font-size: 15px; }
+.hi .big { font-family: Georgia, "Times New Roman", serif; font-size: 24px; display: block; margin-bottom: 4px; }
+
+/* Tautan jelajah */
+.explore { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+.explore a { display: block; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 16px; text-decoration: none; color: var(--ink); }
+.explore a:hover { border-color: var(--amber); }
+.explore a b { font-family: Georgia, "Times New Roman", serif; font-size: 18px; display: block; margin-bottom: 4px; }
+.explore a span { color: var(--muted); font-size: 14px; }
+
+/* Grafik batang */
+.chart { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 18px; margin-top: 14px; }
+.chart h3 { margin-bottom: 2px; }
+.chart .sub { color: var(--muted); font-size: 13.5px; margin: 0 0 10px; }
+.chart svg { width: 100%; height: auto; display: block; }
+.bar-label { font-size: 13px; fill: var(--ink); }
+.bar-value { font-size: 13px; font-weight: 700; fill: var(--ink); }
+.bar-track { fill: #efe8d6; }
+.bar-fill { fill: var(--teal); }
+.bar-fill.alt { fill: var(--amber); }
+
+/* Tabel */
+table { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; margin-top: 14px; font-size: 15px; }
+th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--line); }
+th { background: var(--navy); color: #f6f1e7; font-weight: 600; }
+tr:last-child td { border-bottom: 0; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+tr.hl td { background: var(--amber-soft); }
+
+/* Kotak baca */
+.callout { background: var(--teal-soft); border: 1px solid #a9cec6; border-radius: 10px; padding: 14px 18px; margin-top: 18px; font-size: 14.5px; }
+.callout b { color: var(--teal); }
+.src-line { font-size: 13px; color: var(--muted); margin-top: 18px; }
+
+/* Kaki */
+.foot { border-top: 1px solid var(--line); padding: 20px 0 28px; color: var(--muted); font-size: 13.5px; }
+.foot p { margin: 4px 0; }
+
+/* Telepon */
+@media (max-width: 720px) {
+  .hero h1 { font-size: 30px; }
+  .cards { grid-template-columns: repeat(2, 1fr); }
+  .highlights, .explore { grid-template-columns: 1fr; }
+  .card .val { font-size: 24px; }
+  .top-in { padding-top: 10px; padding-bottom: 10px; }
+  .nav a { padding: 6px 9px; font-size: 14px; }
+  th, td { padding: 8px 10px; font-size: 14px; }
+}
